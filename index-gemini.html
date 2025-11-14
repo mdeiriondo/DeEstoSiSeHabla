@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Esto Sí Se Habla | Salud Mental Adolescente</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- VARIABLES DE COLOR (Según tu pedido) --- */
+        :root {
+            --color-dark-blue: #1f2d4a;
+            --color-purple: #552d77;
+            --color-grey: #a3a5a2;
+            --color-med-blue: #296aa1;
+            --font-primary: 'Raleway', sans-serif; /* [cite: 113] */
+            --font-secondary: 'Asap', sans-serif;    /* [cite: 114] */
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Títulos principales */
+        h1, h2, h3, h4, h5, h6, .navbar-brand {
+            font-family: var(--font-primary);
+            font-weight: 700;
+        }
+
+        /* --- COMPONENTES --- */
+        
+        /* Navbar */
+        .navbar {
+            background-color: var(--color-dark-blue);
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: var(--color-grey) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-purple) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .btn-primary-custom {
+            background-color: var(--color-med-blue);
+            border: none;
+            padding: 10px 25px;
+            font-family: var(--font-primary);
+            font-weight: 700;
+            transition: all 0.3s;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--color-purple);
+            color: white;
+        }
+
+        /* Secciones Generales */
+        section {
+            padding: 60px 0;
+        }
+
+        .bg-light-grey {
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            color: var(--color-purple);
+            margin-bottom: 40px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hitos / Acciones  */
+        .hito-card {
+            border-left: 5px solid var(--color-med-blue);
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .hito-card:hover {
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-dark-blue);
+            color: var(--color-grey);
+            padding: 50px 0;
+        }
+        footer h5 {
+            color: white;
+        }
+        
+        /* Formularios */
+        .form-control:focus {
+            border-color: var(--color-purple);
+            box-shadow: 0 0 0 0.25rem rgba(85, 45, 119, 0.25);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">DE ESTO SÍ SE HABLA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#edicion2025">Edición 2025</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#participar">Quiero participar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#documental">Documental</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container">
+            <h1 class="display-3 mb-4">Un programa para hablar de<br>Salud Mental adolescente</h1>
+            <p class="lead mb-5">Visibilizando, sensibilizando y promoviendo espacios de reflexión.</p>
+            <a href="#participar" class="btn-primary-custom btn-lg">Quiero conocer el programa</a>
+        </div>
+    </header>
+
+    <section id="origen">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title text-start">¿Cómo nace?</h2>
+                    <p>El programa <strong>"De esto sí se habla"</strong> surge en el marco del Concejo Joven 2024, a partir de una propuesta elaborada por estudiantes del Instituto Privado de Educación Integral (IPEI).</p>
+                    <p>El proyecto tuvo como objetivo visibilizar y sensibilizar sobre la salud mental en adolescentes, promoviendo espacios de reflexión y participación activa[cite: 17].</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div style="background-color: var(--color-grey); height: 300px; display: flex; align-items: center; justify-content: center; color: white;">
+                        [Imagen / Recurso Gráfico]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="edicion2025" class="bg-light-grey">
+        <div class="container">
+            <h2 class="section-title">Primera Edición 2025: "Ludopatía digital"</h2>
+            <p class="text-center mb-5">El lema elegido fue "Ludopatía digital", con el propósito de reflexionar sobre el impacto de las apuestas online, los videojuegos y las redes sociales en la salud mental adolescente[cite: 21].</p>
+            
+            <div class="row mt-4">
+                <div class="col-12 text-center mb-4">
+                    <h4>Instituciones Participantes</h4>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-title text-primary">I.P.E.Ι. Nº 3114</h6>
+                            <p class="small text-muted">Cursos: 4º A y B (55 estudiantes) [cite: 25]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-title text-primary">Esc. Téc. Pedro Lucas Funes Nº 647</h6>
+                            <p class="small text-muted">Cursos: 4º A, 5º A, B y C (30 estudiantes) [cite: 26]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-title text-primary">Col. Sagrado Corazón de Jesús</h6>
+                            <p class="small text-muted">Cursos: 4º A y B (62 estudiantes) [cite: 27, 28]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="acciones">
+        <div class="container">
+            <h2 class="section-title">Acciones Realizadas</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="hito-card">
+                        <h5>Charla para docentes</h5>
+                        <p>"Apostando al diálogo. Abordaje docente de las apuestas online en la adolescencia", organizada por el Ministerio de Educación y FARO Digital.</p>
+                    </div>
+                    <div class="hito-card">
+                        <h5>Encuentro de sensibilización</h5>
+                        <p>Sobre salud mental y consumos digitales, con la Secretaría de Educación y la Subsecretaría de Salud Municipalidad de Santa Fe.</p>
+                    </div>
+                    <div class="hito-card">
+                        <h5>Taller audiovisual participativo</h5>
+                        <p>Coordinado por Fundación Cinemas y Lic. Rafael Sancho.</p>
+                    </div>
+                    <div class="hito-card">
+                        <h5>Mural colectivo</h5>
+                        <p>Sobre salud mental y ludopatía digital, realizado junto a la UNL y Lotería de Santa Fe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="documental" style="background-color: var(--color-dark-blue); color: white;">
+        <div class="container text-center">
+            <h2 class="mb-4">Documental: Conocé el Programa</h2>
+            <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="Documental De Esto Si Se Habla" allowfullscreen></iframe>
+            </div>
+            <p class="mt-3 text-muted small">Link directo al video: <a href="https://1drv.ms/v/c/9beb747cb82df204/EfNIl-m8zAxFqHBn7gl0sNMB8T7N-HQ9xr9dfcpTHhpATQ?e=qqy9dR" target="_blank" class="text-white">Ver en OneDrive [cite: 42]</a></p>
+        </div>
+    </section>
+
+    <section id="participar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="section-title text-start">Inscripción para Escuelas</h2>
+                    <p>Si tu escuela desea sumarse a la próxima edición del programa, te invitamos a completar el formulario. Requisitos mínimos[cite: 71]:</p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item">Disponibilidad de al menos 20 horas cátedra[cite: 72].</li>
+                        <li class="list-group-item">Designación de 1 o 2 responsables (comunicación fluida)[cite: 73].</li>
+                        <li class="list-group-item">Autorización institucional para uso de imagen[cite: 74].</li>
+                        <li class="list-group-item">Cursos entre 3º y 5º/6º año. Cupo: 30-60 estudiantes[cite: 75].</li>
+                    </ul>
+                    <a href="#contacto-escuelas" class="btn-primary-custom">Ir al Formulario de Inscripción</a>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card bg-light border-0 p-4">
+                        <h3 class="mb-3" style="color: var(--color-dark-blue);">¡Votá el lema de la 2da Edición!</h3>
+                        <p>Elegí el próximo tema eje del año[cite: 82]:</p>
+                        <form>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="votoLema" id="lema1">
+                                <label class="form-check-label" for="lema1">Ludopatía digital [cite: 83]</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="votoLema" id="lema2">
+                                <label class="form-check-label" for="lema2">Violencia digital [cite: 84]</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="votoLema" id="lema3">
+                                <label class="form-check-label" for="lema3">Salud mental en la era digital [cite: 85]</label>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="email" class="form-control" placeholder="Tu correo electrónico para validar voto">
+                            </div>
+                            <button type="submit" class="btn btn-dark mt-3">Enviar Voto</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="bg-light-grey">
+        <div class="container">
+            <h2 class="section-title">Recursos de Construcción Comunitaria</h2>
+            <p class="text-center mb-4">Información estatal de interés, redes y recursos de cuidados. [cite: 50]</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card text-center p-4 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Guía de Recursos Digital</h5>
+                            <p class="card-text">Redes y cuidados en salud mental para adolescentes.</p>
+                            <a href="#" class="btn btn-outline-primary">Descargar PDF [cite: 53]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <h2 class="section-title">Noticias</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Concejo Municipal</h6>
+                            <h5 class="card-title">El Concejo lanzó un programa para salud mental...</h5>
+                            <a href="#" class="card-link">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">El Litoral</h6>
+                            <h5 class="card-title">Programa inédito sobre Salud Mental Adolescente</h5>
+                            <a href="#" class="card-link">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Toda Santa Fe</h6>
+                            <h5 class="card-title">Mural en el puerto para visibilizar</h5>
+                            <a href="#" class="card-link">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="bg-dark text-white">
+        <div class="container">
+            <h2 class="section-title text-white">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Mensaje</label>
+                            <textarea class="form-control" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary-custom">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-5">
+                    <h5 class="mb-4">Socios Estratégicos</h5>
+                    <p class="small">
+                        Presidencia del Honorable Concejo Municipal de Santa Fe • 
+                        Gobierno de la Provincia de Santa Fe (Ministerio de Salud y Educación) • 
+                        Municipalidad de Santa Fe • 
+                        Lotería de Santa Fe • 
+                        Universidad Nacional del Litoral • 
+                        Fundación Cinemas
+                    </p>
+                </div>
+                <div class="col-md-12 text-center border-top pt-4 border-secondary">
+                    <p>&copy; 2025 Programa De Esto Sí Se Habla.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

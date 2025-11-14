@@ -1,0 +1,774 @@
+/* =========================================
+   RECURSOS.CSS - Estilos para recursos.html
+   ========================================= */
+
+/* ==================== LÍNEAS DE AYUDA ==================== */
+.section-helplines {
+    background: white;
+}
+
+.helplines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.helpline-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.helpline-card.priority {
+    border-color: var(--danger-color);
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+}
+
+.helpline-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.helpline-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--danger-color);
+    color: white;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.helpline-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.helpline-card.priority .helpline-icon {
+    background: linear-gradient(135deg, var(--danger-color), #ff4757);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.helpline-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.helpline-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+    line-height: 1;
+}
+
+.helpline-card.priority .helpline-number {
+    color: var(--danger-color);
+}
+
+.helpline-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.helpline-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.helpline-info span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.helpline-info i {
+    color: var(--secondary-color);
+}
+
+/* ==================== CENTROS DE SALUD ==================== */
+.section-health-centers {
+    background: var(--light-bg);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: transparent;
+}
+
+.health-centers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.health-center-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.health-center-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.center-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--light-bg);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.center-type i {
+    color: var(--secondary-color);
+}
+
+.health-center-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.center-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.info-item i {
+    color: var(--secondary-color);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.info-item a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+    color: var(--primary-color);
+}
+
+.center-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.center-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.service-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--light-bg);
+    padding: 0.375rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8125rem;
+    color: var(--text-dark);
+}
+
+.service-tag i {
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+}
+
+/* ==================== RECURSOS DIGITALES ==================== */
+.section-digital-resources {
+    background: white;
+}
+
+.digital-resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.digital-resource-card {
+    background: var(--light-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.digital-resource-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    background: white;
+}
+
+.resource-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.resource-icon.app {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.resource-icon.web {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.digital-resource-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.digital-resource-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.resource-platforms {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.platform-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.75rem 1.25rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.platform-link:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateX(3px);
+}
+
+.resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8125rem;
+    color: var(--text-dark);
+    border: 2px solid var(--border-color);
+}
+
+.tag i {
+    color: var(--secondary-color);
+}
+
+/* ==================== MATERIALES DESCARGABLES ==================== */
+.section-materials {
+    background: var(--light-bg);
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.material-card {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.material-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.material-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.material-icon.pdf {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.material-icon.video {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.material-icon.infographic {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.material-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.material-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.material-meta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--light-bg);
+}
+
+.material-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8125rem;
+    color: var(--text-light);
+}
+
+.material-meta i {
+    color: var(--secondary-color);
+}
+
+/* ==================== LINKS INSTITUCIONALES ==================== */
+.section-institutional-links {
+    background: linear-gradient(135deg, #1a2332 0%, #2d3e50 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.institutional-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.institutional-link-card {
+    background: rgba(255,255,255,0.98);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.institutional-link-card:hover {
+    background: white;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.link-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.link-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.institutional-link-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.institutional-link-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.links-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* ==================== PROTOCOLO DE CRISIS ==================== */
+.section-crisis-protocol {
+    background: white;
+}
+
+.crisis-protocol-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.protocol-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.protocol-step {
+    display: flex;
+    gap: 20px;
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.protocol-step:hover {
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: white;
+    flex-shrink: 0;
+}
+
+.step-content h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.step-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Protocol Warning Box */
+.protocol-warning {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 100px;
+}
+
+.warning-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.protocol-warning h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.protocol-warning ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.protocol-warning ul li {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.protocol-warning ul li i {
+    color: var(--success-color);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.emergency-box {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.emergency-box h4 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.emergency-numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emergency-number {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0.875rem;
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.emergency-number:hover {
+    border-color: var(--danger-color);
+    color: var(--danger-color);
+    transform: translateX(5px);
+}
+
+.emergency-number i {
+    color: var(--danger-color);
+    font-size: 1.25rem;
+}
+
+/* ==================== CTA RECURSOS ==================== */
+.section-cta-resources {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 80px 0;
+}
+
+.cta-resources-content {
+    text-align: center;
+    color: white;
+}
+
+.cta-resources-content i {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.cta-resources-content h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.cta-resources-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.cta-resources-content .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .crisis-protocol-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .protocol-warning {
+        position: static;
+    }
+    
+    .health-centers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .helplines-grid,
+    .digital-resources-grid,
+    .materials-grid,
+    .institutional-links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .health-centers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .helpline-number {
+        font-size: 2rem;
+    }
+    
+    .material-meta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .protocol-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
