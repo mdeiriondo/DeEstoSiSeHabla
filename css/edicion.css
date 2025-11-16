@@ -5,6 +5,8 @@
 /* ==================== PAGE HERO (override) ==================== */
 .page-hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    margin-top: 140px;
+    position: relative;
 }
 
 /* ==================== SECCIÓN TEMA ==================== */

@@ -392,9 +392,9 @@ img {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 40px;
+    bottom: -200px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
     text-align: center;
     z-index: 2;
     color: var(--color-white);

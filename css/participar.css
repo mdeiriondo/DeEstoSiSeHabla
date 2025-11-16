@@ -1,0 +1,41 @@
+/* .page-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #222;
+    padding: 3rem 1rem;
+    text-align: center;
+} */
+/* ==================== PAGE HERO (override) ==================== */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    margin-top: 140px;
+    position: relative;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+    .page-hero {
+        padding: 2rem 0.5rem;
+    }
+    .page-hero h1 {
+        font-size: 1.75rem;
+    }
+    .page-hero p {
+        font-size: 1rem;
+    }
+}
